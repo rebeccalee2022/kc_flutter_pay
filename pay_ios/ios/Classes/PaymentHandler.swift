@@ -79,6 +79,7 @@ class PaymentHandler: NSObject {
       result(FlutterError(code: "invalidPaymentConfiguration", message: "It was not possible to create a payment request from the provided configuration. Review your payment configuration and run again", details: nil))
       return
     }
+    paymentRequest.shippingMethods = shippingMethodCalculator()
     
     // Display the payment selector with the request created.
     let paymentController = PKPaymentAuthorizationController(paymentRequest: paymentRequest)
@@ -91,6 +92,29 @@ class PaymentHandler: NSObject {
       }
     })
   }
+    
+    // Define the shipping methods (this app only offers delivery) and the delivery dates
+    func shippingMethodCalculator() -> [PKShippingMethod] {
+        
+        let today = Date()
+        let calendar = Calendar.current
+        
+        let shippingStart = calendar.date(byAdding: .day, value: 5, to: today)
+        let shippingEnd = calendar.date(byAdding: .day, value: 10, to: today)
+        
+        if let shippingEnd = shippingEnd, let shippingStart = shippingStart {
+            let startComponents = calendar.dateComponents([.calendar, .year, .month, .day], from: shippingStart)
+            let endComponents = calendar.dateComponents([.calendar, .year, .month, .day], from: shippingEnd)
+            
+            let shippingDelivery = PKShippingMethod(label: "Delivery", amount: NSDecimalNumber(string: "0.00"))
+            shippingDelivery.dateComponentsRange = PKDateComponentsRange(start: startComponents, end: endComponents)
+            shippingDelivery.detail = "Sweaters sent to your address"
+            shippingDelivery.identifier = "DELIVERY"
+            
+            return [shippingDelivery]
+        }
+        return []
+    }
   
   /// Utility function to turn the payment configuration received through the method channel into a `Dictionary`.
   ///
