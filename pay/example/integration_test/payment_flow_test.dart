@@ -14,7 +14,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:pay/pay.dart';
+import 'package:kc_flutter_pay/pay.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();

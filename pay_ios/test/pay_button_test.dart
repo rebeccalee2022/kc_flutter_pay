@@ -15,7 +15,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pay_ios/pay_ios.dart';
+import 'package:kc_pay_ios/pay_ios.dart';
 
 void main() {
   setUp(() async {
