@@ -38,11 +38,16 @@ dependencies:
 
 dependency_overrides:
   pay_android:
-    path: ../../pay_android
-  pay_ios:
-    path: ../../pay_ios
-  pay_platform_interface:
-    path: ../../pay_platform_interface
+    git:
+      url: https://github.com/rebeccalee2022/kc_flutter_pay
+      path: pay_android
+    
+  pay_ios: 
+    git:
+      url: https://github.com/rebeccalee2022/kc_flutter_pay
+      path: pay_ios
+
+  pay_platform_interface: ^1.0.3
 
 dev_dependencies:
   integration_test:
