@@ -14,7 +14,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:kc_flutter_pay/pay.dart';
+import 'package:pay/pay.dart';
 
 import 'payment_configurations.dart' as payment_configurations;
 

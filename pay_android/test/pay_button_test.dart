@@ -4,7 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:kc_pay_android/pay_android.dart';
+import 'package:pay_android/pay_android.dart';
 
 void main() {
   setUp(() async {});

@@ -29,7 +29,7 @@ flutter:
 dependencies:
   flutter:
     sdk: flutter
-  kc_flutter_pay:
+  pay:
     path: ../
 
   # The following adds the Cupertino Icons font to your application.
@@ -37,9 +37,9 @@ dependencies:
   cupertino_icons: ^1.0.3
 
 dependency_overrides:
-  kc_pay_android:
+  pay_android:
     path: ../../pay_android
-  kc_pay_ios:
+  pay_ios:
     path: ../../pay_ios
   pay_platform_interface:
     path: ../../pay_platform_interface

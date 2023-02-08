@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 Pod::Spec.new do |s|
-  s.name             = 'kc_pay_ios'
+  s.name             = 'pay_ios'
   s.version          = '0.0.1'
   s.summary          = 'A new flutter plugin project.'
   s.description      = <<-DESC

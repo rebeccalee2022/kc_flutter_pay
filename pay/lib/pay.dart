@@ -20,10 +20,10 @@ export 'package:pay_platform_interface/core/payment_configuration.dart'
 export 'package:pay_platform_interface/core/payment_item.dart'
     show PaymentItem, PaymentItemType, PaymentItemStatus;
 
-export 'package:kc_pay_android/pay_android.dart'
+export 'package:pay_android/pay_android.dart'
     show RawGooglePayButton, GooglePayButtonType;
 
-export 'package:kc_pay_ios/pay_ios.dart'
+export 'package:pay_ios/pay_ios.dart'
     show RawApplePayButton, ApplePayButtonStyle, ApplePayButtonType;
 
 part 'src/pay.dart';

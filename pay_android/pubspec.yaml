@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: kc_pay_android
+name: pay_android
 description: A plug-in to add support for payments on the Android side of Flutter applications.
 version: 1.0.9
 homepage: https://github.com/google-pay/flutter-plugin

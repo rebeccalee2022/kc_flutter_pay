@@ -32,7 +32,7 @@ Define the configuration for your payment provider(s). Take a look at the parame
 ### Example
 This snippet assumes the existence a payment configuration for Apple Pay ([`defaultApplePayConfigString`](https://github.com/google-pay/flutter-plugin/tree/main/pay/example/lib/payment_configurations.dart#L27)) and another one for Google Pay ([`defaultGooglePayConfigString`](https://github.com/google-pay/flutter-plugin/tree/main/pay/example/lib/payment_configurations.dart#L63)):
 ```dart
-import 'package:kc_flutter_pay/pay.dart';
+import 'package:pay/pay.dart';
 
 const _paymentItems = [
   PaymentItem(
@@ -107,7 +107,7 @@ FutureBuilder<PaymentConfiguration>(
 If you prefer to have more control over each individual request and the button separately, you can instantiate a payment client and add the buttons to your layout independently:
 
 ```dart
-import 'package:kc_flutter_pay/pay.dart';
+import 'package:pay/pay.dart';
 
 const _paymentItems = [
   PaymentItem(
